@@ -77,6 +77,10 @@ def get_common_eligibility(e1, e2):
                 if start2<=start1:
                     gap_time = check_overlapped_time_gap(ustart1, uend2)
                     available.append(gap_time)
+
+            if (start1>start2 and end1<end2):
+                gap_time = check_overlapped_time_gap(ustart1, ustart2)
+                available.append(gap_time)
             
     return available
     
